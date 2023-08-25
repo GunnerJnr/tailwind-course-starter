@@ -696,6 +696,26 @@ html {
   height: 100%;
 }
 
+.h-\[\]{
+  height: ;
+}
+
+.h-\[calc\]{
+  height: calc;
+}
+
+.h-\[calc\(\)\]{
+  height: calc();
+}
+
+.h-\[calc\(100vh-200px\)\]{
+  height: calc(100vh - 200px);
+}
+
+.min-h-\[400px\]{
+  min-height: 400px;
+}
+
 .w-8{
   width: 2rem;
 }
@@ -732,6 +752,10 @@ html {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.flex-col{
+  flex-direction: column;
 }
 
 .items-center{
@@ -785,6 +809,42 @@ html {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\)\(\)\]{
+  background-image: url()();
+}
+
+.bg-\[url\(\)\]{
+  background-image: url();
+}
+
+.bg-\[url\(\'\'\)\]{
+  background-image: url('');
+}
+
+.bg-\[url\(\'\.\/\'\)\]{
+  background-image: url('./');
+}
+
+.bg-\[url\(\'\.\/assets\'\)\]{
+  background-image: url('./assets');
+}
+
+.bg-\[url\(\'\.\/assets\/\'\)\]{
+  background-image: url('./assets/');
+}
+
+.bg-\[url\(\'\.\/assets\/images\'\)\]{
+  background-image: url('./assets/images');
+}
+
+.bg-\[url\(\'\.\/assets\/images\/\'\)\]{
+  background-image: url('./assets/images/');
+}
+
+.bg-\[url\(\'\.\/assets\/images\/hero\.jpg\'\)\]{
+  background-image: url('./assets/images/hero.jpg');
+}
+
 .from-rose-500{
   --tw-gradient-from: #f43f5e;
   --tw-gradient-to: rgb(244 63 94 / 0);
@@ -793,6 +853,18 @@ html {
 
 .to-pink-500{
   --tw-gradient-to: #ec4899;
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-fixed{
+  background-attachment: fixed;
+}
+
+.bg-center{
+  background-position: center;
 }
 
 .p-2{
