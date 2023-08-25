@@ -7,18 +7,76 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuIcon = document.getElementById('mobile-menu-button');
+        mobileMenuIcon.addEventListener('click', () => {
+          if(mobileMenuIcon.classList.contains('open')) {
+            mobileMenuIcon.classList.remove('open');
+          } else {
+            mobileMenuIcon.classList.add('open');
+          }
+        });
+
+        const ticketsMenuItem = document.getElementById('ticket-menu-item');
+        ticketsMenuItem.addEventListener('click', () => {
+          if(ticketsMenuItem.classList.contains('open')) {
+            ticketsMenuItem.classList.remove('open');
+          } else {
+            ticketsMenuItem.classList.add('open');
+          }
+        });
+      };
+    </script>
   </head>
   <body>
+    <!-- Main Begin -->
     <main>
+      <!-- Header Begin -->
       <header class="text-zinc-200">
+        <!-- Desktop Nav Begin -->
         <nav class="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500">
+          <!-- Logo Begin -->
           <div class="flex items-center p-2 gap-2">
             <img src="./assets/images/logo-inverted.png" alt="logo" width="50" />
             <div class="text-2xl font-bold">
               tw:<span class="text-sky-900">mf</span>
             </div>
           </div>
-          <div class="flex flex-1 items-center justify-end">
+          <!-- Logo End -->
+          <!-- Mobile Nav Begin -->
+          <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
+            <!-- Hamburger -->
+            <div id="mobile-menu-button" class="group peer">
+              <div class="w-8 h-1 rounded-full bg-zinc-200 top-0 group-open:rotate-45 group-open:top-2 relative transition-all"></div>
+              <div class="w-8 h-1 mt-1 rounded-full bg-zinc-200 opacity-100 group-open:opacity-0 transition-all"></div>
+              <div class="w-8 h-1 mt-1 rounded-full bg-zinc-200 top-0 group-open:-rotate-45 group-open:-top-2 relative transition-all"></div>
+            </div>
+            <!-- Hamburger End -->
+            <!-- Mobile Menu Items Begin -->
+            <div class="w-full absolute top-[62px] left-0 bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block hidden">
+              <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"><span>Home</span></div>
+              <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"><span>Lineups</span></div>
+              <div id="ticket-menu-item" class="group relative h-full cursor-pointer text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10">
+                <div class="p-4 text-center font-bold">Tickets</div>
+                <!-- Sub Menu Items for Tickets Begin -->
+                <div class="hidden group-open:block">
+                  <div class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                    <span>Single Day Ticket</span>
+                  </div>
+                  <div class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                    <span>Seven Day Ticket</span>
+                  </div>
+                </div>
+                <!-- Sub Menu Items for Tickets End -->
+              </div>
+              <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"><span>Support</span></div>
+            </div>
+            <!-- Mobile Menu Items End -->
+          </div>
+          <!-- Mobile Nav End-->
+          <!-- Nav Items Begin -->
+          <div class="md:flex hidden flex-1 items-center justify-end">
             <div class="menu-item"><span>Home</span></div>
             <div class="menu-item"><span>Lineups</span></div>
             <div class="menu-item group">
@@ -30,8 +88,12 @@
             </div>
             <div class="menu-item"><span>Support</span></div>
           </div>
+          <!-- Nav Items End -->
         </nav>
+        <!-- Desktop Nav End -->
       </header>
+      <!-- Header End -->
     </main>
+    <!-- Main End -->
   </body>
 </html>
